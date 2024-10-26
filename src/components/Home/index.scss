@@ -33,6 +33,44 @@
         margin-left: -300px;
         margin-top: 20px;
         background-color: #505452;
+
+        .date-box-container > * {
+            display: inline-flex;
+        }
+
+        .date-box {
+            width: fit-content;
+            height: 100px;
+        }
+
+        .date-box > * {
+            display: block;
+        }
+
+        .date-label {
+            background-color: red;
+            height: fit-content;
+            width: fit-content;
+            padding: .3em .8em;
+        }
+
+        .date-output {
+            background-color: black;
+            height: fit-content;
+            width: fit-content;
+            font-size: 40px;
+            color: white;
+        }
+
+        .date-input {
+            height: 50px;
+            width: 200px;
+            background-color: black;
+            border: none;
+            color: white;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
     }
 
     h1 {

@@ -2,7 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBed, faPersonWalking, faHeart, faCarrot, faGlassWater, faFaceGrimace} from '@fortawesome/free-solid-svg-icons'
+import { faBed, faPersonWalking, faHeart, faCarrot, faGlassWater, faFaceGrimace, faCalendar} from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders';
 
@@ -64,11 +64,33 @@ const Home = () => {
                 </nav>
             </div>
             <div class="data-input-box">
-
+                <div class="date-box-container">
+                    <div class="date-box"> 
+                        <div class="date-label"> MONTH </div>
+                        <div class="date-output"> JAN </div>
+                    </div>
+                    <div class="date-box"> 
+                        <div class="date-label"> DAY </div>
+                        <div class="date-output"> 01 </div>
+                    </div>
+                    <div class="date-box"> 
+                        <div class="date-label"> YEAR </div>
+                        <div class="date-output"> 1985 </div>
+                    </div>
+                    <div class="date-box">
+                        <div class="date-label"> HOUR </div>
+                        <div class="date-output"> 00 </div> </div>
+                    <div class="date-box"> 
+                        <div class="date-label"> MIN </div>
+                        <div class="date-output"> 00 </div>
+                    </div>
+                </div>
+                
+                <input type="text" id="nameInput" placeholder="Enter Here:"  class="data-input" />
 
             </div>
         </div>
-        <Loader type="pacman" />
+        <Loader type="ball-pulse" />
         </>
     );
 }
