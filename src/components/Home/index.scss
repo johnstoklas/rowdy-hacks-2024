@@ -1,14 +1,5 @@
 .home-page {
 
-    .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40%;
-        max-height: 90%;
-    }
-
     .health-modifiers-container {
         margin-top: 80px;
         position: relative;
@@ -26,11 +17,11 @@
 
     .data-input-box {
         border: 2px solid white;
-        width: 600px;
+        width: 800px;
         height: 350px;
         position: relative;
         left: 50%;
-        margin-left: -300px;
+        margin-left: -400px;
         margin-top: 20px;
         background-color: #505452;
 
@@ -38,132 +29,84 @@
             display: flex;
             flex-direction: row;
             gap: 20px;    
-            margin-left: 50px;     
+            margin-left: 150px;     
             margin-top: 10px;
-        }
-        
-        .date-box {
-            display: flex;
-            flex-direction: column; 
-            align-items: center;  
-        }
-        
-        .date-label, .date-output {
-            text-align: center;    
-        }
-        
-        .date-label {
-            background-color: red;
-            height: fit-content;
-            width: 30px;
-            padding: .3em .8em;
-            font-family: Coolvetica;
-        }
 
-        .date-output {
-            background-color: black;
-            height: fit-content;
-            width: fit-content;
-            font-size: 40px;
-            color: orange;
-            padding: 5px;
-            font-family: DS-Digital;
-            margin-top: 5px;
-            padding-left: 10px;
-            letter-spacing: 6px;
+            .date-box {
+                display: flex;
+                flex-direction: column; 
+                align-items: center; 
+                
+                .date-label, .date-output {
+                    text-align: center;    
+                }
+                
+                .date-label {
+                    background-color: red;
+                    height: fit-content;
+                    width: 30px;
+                    padding: .3em .8em;
+                    font-family: Coolvetica;
+                }
+        
+                .date-output {
+                    background-color: black;
+                    height: fit-content;
+                    width: fit-content;
+                    font-size: 40px;
+                    color: orange;
+                    padding: 5px;
+                    font-family: DS-Digital;
+                    margin-top: 5px;
+                    padding-left: 10px;
+                    letter-spacing: 6px;
+                }
+            }
         }
-    }
-
-    .input-container > * {
-        display: inline-flex;
-        margin-top: 10px;
     }
 
     .input-container {
-        .input-data {
-            height: 50px;
-            width: 200px;
-            background-color: black;
-            border: none;
-            color: white;
-            margin-left: 30px;
-            font-family: Coolvetica;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+        margin-left: 45px;
+        margin-top: 35px;
+
+        .input-box div {
+            margin: 6px 5px;
         }
 
-        .input-unit {
-            background-color: black;
-            height: 50px;
-            width: 200px;
-        }
-    }
+        .input-box {
+            display: inline-flex;
+
+            .input-data {
+                width: calc(33.33% - 10px); 
+                border: 1px solid #333; 
+                height: 50px;
+                width: 150px;
+                background-color: black;
+                border: none;
+                font-size: 15px;
+                color: white;
+                font-family: Coolvetica;
+                display: flex; 
+                align-items: center;
+                justify-content: center; 
+                margin: 0;
+            }
     
-
-    h1 {
-        color: #fff;
-        font-size: 53px;
-        margin: 0;
-        font-family: 'Coolvetica';
-        font-weight: 400;
-
-        &::before {
-            content: '<h1>';
-            font-family: 'La Belle Aurore';
-            color: #D35400;
-            font-size: 10px;
-            position: absolute;
-            margin-top: -40px;
-            left: 15px;
-            opacity: 0.6;
+            .input-unit {
+                background-color: black;
+                height: 50px;
+                width: 200px;
+                font-size: 40px;
+                color: orange;
+                font-family: DS-Digital;
+                margin-top: 0px;
+            }
         }
 
-        &::after {
-            content: '</h1>';
-            font-family: 'La Belle Aurore';
-            color: #D35400;
-            font-size: 18px;
-            position: absolute;
-            margin-top: 18px;
-            margin-left: 20px;
-            animation: fadeIn 1s 1.7s backwards;
-            opacity: 0.6;
-        }
-
-        img {
-            width: 32px;
-            margin-left: 20px;
-            opacity: 0;
-            height: auto;
-            animation: rotateIn 1s linear both;
-            animation-delay: 1.4s;
-        }
-    }
-}
-
-h2 {
-    color: #8d8d8d;
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 11px;
-    letter-spacing: 3px;
-    animation: fadeIn 1s 1.8s backwards;
-}
-
-.flat-button {
-    color: #D35400;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    font-family: sans-serif;
-    text-decoration: none;
-    padding: 10px 18px;
-    border: 1px solid #D35400 ;
-    margin-top: 25px;
-    float: left;
-    animation: fadeIn 1s 1.8s backwards;
-    white-space: nowrap;
-
-    &:hover {
-        background-color: #D35400;
-        color: #333;
+        
     }
 }
