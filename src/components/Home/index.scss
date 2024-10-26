@@ -8,6 +8,33 @@
         width: 40%;
         max-height: 90%;
     }
+
+    .health-modifiers-container {
+        margin-top: 80px;
+        position: relative;
+        left: 50%;
+        margin-left: -140px;
+        width: fit-content;
+
+        .health-modifiers {
+            color: white;
+            width: 3em;
+            height: 3em;
+            margin-right: 1.5em;
+        }
+    }
+
+    .data-input-box {
+        border: 2px solid white;
+        width: 600px;
+        height: 350px;
+        position: relative;
+        left: 50%;
+        margin-left: -300px;
+        margin-top: 20px;
+        background-color: #505452;
+    }
+
     h1 {
         color: #fff;
         font-size: 53px;
