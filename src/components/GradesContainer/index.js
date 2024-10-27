@@ -4,6 +4,8 @@ import SmallCircleGrades from '../SmallCircleGrades';
 
 const getGradeForMetric = (value, metric) => {
   // Define ranges for each metric to assign letter grades
+  console.log(metric);
+  console.log(value);
   if (metric === 'sleep') {
     if (value >= 8) return 'A+';
     if (value >= 7) return 'A';
@@ -11,10 +13,10 @@ const getGradeForMetric = (value, metric) => {
     if (value >= 5) return 'B';
     return 'C';
   } else if (metric === 'heartRate') {
-    if (value <= 60) return 'A+';
-    if (value <= 70) return 'A';
-    if (value <= 80) return 'B+';
-    if (value <= 90) return 'B';
+    if (value <= 150) return 'A+';
+    if (value <= 160) return 'A';
+    if (value <= 170) return 'B+';
+    if (value <= 180) return 'B';
     return 'C';
   } else if (metric === 'steps') {
     if (value >= 10000) return 'A+';
@@ -34,7 +36,7 @@ const getGradeForMetric = (value, metric) => {
     if (value >= 4) return 'B+';
     return 'C';
   } else if (metric === 'stress') {
-    if (value === 1) return 'A+';
+    if (value > 1 && value < 2) return 'A+';
     if (value <= 2) return 'A';
     if (value <= 3) return 'B+';
     if (value <= 4) return 'B';
@@ -49,7 +51,7 @@ const GradeContainer = ({ analysis }) => {
     avgHeartRate = 0,
     avgSteps = 0,
     stressLevel = 0,
-    avgCalories = 0,  // Add more fields if needed
+    avgCalories = 0,  
     avgWater = 0
   } = analysis?.analysis || {};
 
@@ -61,11 +63,60 @@ const GradeContainer = ({ analysis }) => {
   const waterGrade = getGradeForMetric(avgWater, 'water');  // Placeholder logic for water
   const calorieGrade = getGradeForMetric(avgCalories, 'calories');  // Placeholder logic for calories
 
+  const list = [
+    sleepGrade,
+    heartRateGrade,
+    stepsGrade,
+    stressGrade,
+    waterGrade,
+    calorieGrade
+  ]
+
+  // Initialize count
+let count = 0;
+
+// Function to calculate the total score from the list of grades
+const overall = (list) => {
+  list.forEach((key) => {
+    if (key === 'A+') {
+      count += 5;
+    } else if (key === 'A') {
+      count += 4;
+    } else if (key === 'B+') {
+      count += 3;
+    } else if (key === 'B') {
+      count += 2;
+    } else if (key === 'C') {
+      count += 1;
+    }
+  });
+};
+
+overall(list);
+
+// Function to convert the total count to an overall grade
+const overallGrade = (count) => {
+  const average = count / 6;  // Divide the total by the number of subjects
+  if (average < 1.5) {
+    return 'C';
+  } else if (average < 2.5) {
+    return 'B';
+  } else if (average < 3.5) {
+    return 'B+';
+  } else if (average < 4.5) {
+    return 'A';
+  } else {
+    return 'A+';
+  }
+};
+
+const grade = overallGrade(count);
+
   return (
       <div className="grade-container fade-in"> 
         <div>
             <h1> Overall Grade </h1>
-            <div className="main-grade"> A+ </div>
+            <div className="main-grade"> {grade} </div>
         </div>
         <div className="specific-grades">
           <SmallCircleGrades grade={heartRateGrade} label="Heart Rate" />
