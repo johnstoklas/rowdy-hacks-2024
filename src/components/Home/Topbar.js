@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 const Topbar = () => (
-    <div className='nav-bar'>
+    <div className='nav-bar fade-in'>
         <nav>
             <NavLink
                 exact="true"

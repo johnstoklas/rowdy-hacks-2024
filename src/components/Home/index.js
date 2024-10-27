@@ -11,8 +11,7 @@ const Home = () => {
         <>
         <Topbar />
         <div className="home-page">
-        {/*<NavigateProfile />*/}
-        <div className="data-input-box">
+        <div className="data-input-box fade-in">
             <div class="heading-section">
                 <h1 class="heading1-text"> Enter Health Data for Analysis </h1>
             </div>
