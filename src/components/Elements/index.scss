@@ -1,0 +1,22 @@
+modifiers-container {
+    margin-top: 80px;
+    position: relative;
+    left: 50%;
+    margin-left: -140px;
+    width: fit-content;
+
+    nav {
+        display: flex;  // Use flexbox for horizontal alignment
+        gap: 20px;      // Add space between icons
+    }
+
+    .modifiers {
+        font-size: 3em;  // Adjust the icon size (increase as needed)
+        color: white;    // Change the color if needed
+        transition: color 0.3s; // Optional: smooth color transition on hover
+
+        &:hover {
+            color: orange; // Change color on hover (optional)
+        }
+    }
+}

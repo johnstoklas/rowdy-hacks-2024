@@ -1,74 +1,57 @@
-.stage-cube-cont {
-    width: 50%;
-    height: 100%;
-    top: 0;
-    padding-top: 18%;
-    margin-left: 0;
-    position: absolute;
-    right: 0;
-    overflow: hidden;
-} 
-
-.cubespinner {
-    animation-name: spincube;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 12s;
-    transform-style: preserve-3d;
-    transform-origin: 100px 100px 0;
-    margin-left: calc(50% - 100px);
-
-    div { 
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border: 1px solid #ccc;
-        background: rgba(255,255,255,0.4);
-        font-size: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 0 20px 0px lightyellow;
+nav {
+    margin: 20px;
+  
+    button {
+      margin-bottom: 20px; 
     }
-
-    .face1 {
-        transform: translateZ(100px);
+  
+    .menu {
+      list-style-type: none;
+      padding: 0;
+  
+      .item {
+        margin-bottom: 15px;
+  
+        .dropdown-row {
+          display: flex; 
+          flex-direction: column; 
+          margin-bottom: 10px; 
+  
+          .dropdown-toggle {
+            cursor: pointer;
+            padding: 10px; 
+            background-color: #f1f1f1; 
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+            margin-bottom: 5px; 
+  
+            &:hover {
+              background-color: #e1e1e1; 
+            }
+          }
+  
+          .dropdown-content {
+            display: none; 
+            margin-top: 10px;
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            background-color: #fff; 
+            padding: 10px;
+            width: 100%;
+  
+            &.active {
+              display: block; 
+            }
+          }
+        }
+      }
+  
+      .overall-dropdown {
+        margin: 10px 0; 
+        border: 1px solid #ccc; 
+        padding: 10px; 
+        background-color: #f9f9f9; 
+        border-radius: 5px; 
+      }
     }
-    .face2 {
-        transform: rotateY(90deg) translateZ(100px);
-    }
-    .face3 {
-        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-    }
-    .face4 {
-        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-    }
-    .face5 {
-        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-    }
-    .face6 {
-        transform: rotateX(-90deg) translateZ(100px);
-    }
-}
-
-@keyframes spincube {
-    from,
-    to {
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    }
-    16% {
-        transform: rotateY(-90deg);
-    }
-    33% {
-        transform: rotateY(-90deg) rotateZ(90deg);
-    }
-    50% {
-        transform: rotateY(-180deg) rotateZ(90deg);
-    }
-    66% {
-        transform: rotateY(-270deg) rotateZ(90deg);
-    }
-    83% {
-        transform: rotateX(90deg);
-    }
-}
+  }

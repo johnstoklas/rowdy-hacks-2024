@@ -12,6 +12,7 @@ root.render(
       <App />
     </HashRouter>
   </React.StrictMode>
+  
 );
 
 reportWebVitals();

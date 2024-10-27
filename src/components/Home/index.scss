@@ -1,5 +1,19 @@
 .home-page {
 
+    .nav-bar {
+        width: 30px;
+
+        .heart-icon {
+            font-size: 10em; // Adjust this value to make the icon larger or smaller
+            color: white;   // Change the color if needed
+            transition: color 0.3s; // Optional: smooth color transition on hover
+    
+            &:hover {
+                color: orange; // Change color on hover (optional)
+            }
+        }
+    }
+
     .health-modifiers-container {
         margin-top: 80px;
         position: relative;
