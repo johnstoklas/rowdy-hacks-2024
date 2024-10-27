@@ -10,15 +10,25 @@ const Health = () => {
     <div className="container">
       {/* Response Area */}
       <div className="response-container">
-        <div className="scrollable-text"> AI will go here... </div>
+        
+        <div className="scrollable-text"> </div>
       </div>
 
       {/* Grade Area */}
       <GradeContainer />
 
       {/* Graph Area */}
-      <div className="graph-container">
-        <div className="graph">Graph Area 1</div>
+
+      <div className="graph-container1 fade-in">
+        <div className="graph">
+          <h1> Analyze Trends Over Time! </h1>
+        </div>
+      </div>
+
+      <div className="graph-container2 fade-in">
+        <div className="graph">
+          <h1> Analyze Trends Over Time! </h1>
+        </div>
       </div>
 
     </div>

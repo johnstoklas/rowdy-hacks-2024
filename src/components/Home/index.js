@@ -1,9 +1,7 @@
 import './index.scss';
-import Loader from 'react-loaders';
 import DataInputBox from './DataInputBox';
 import DatePicker from './DatePicker';
 import SubmitButton from './SubmitButton';
-import NavigateProfile from './NavigateProfile';
 import Topbar from './Topbar';
 
 const Home = () => {

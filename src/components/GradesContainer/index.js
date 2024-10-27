@@ -5,9 +5,11 @@ import SmallCircleGrades from '../SmallCircleGrades';
 
 const GradeContainer = () => {
   return (
+    <>
     <div class="grade-container"> 
-      <div className="main-grade"> A+ </div>
-      <div className="specific-grades">
+      <div className="background-shape"></div>
+      <div className="main-grade fade-in"> A+ </div>
+      <div className="specific-grades fade-in">
         <SmallCircleGrades grade="A+" label="Heart Rate"/>
         <SmallCircleGrades grade="B-" label="Exercise"/>
         <SmallCircleGrades grade="A-" label="Sleep"/>
@@ -16,6 +18,7 @@ const GradeContainer = () => {
         <SmallCircleGrades grade="B" label="Stress"/>
       </div>
     </div>
+    </>
   )
 }
 

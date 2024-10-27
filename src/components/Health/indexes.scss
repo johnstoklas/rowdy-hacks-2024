@@ -23,5 +23,8 @@
             position: relative;
             left: 95%;
         }
+        &:active {
+            transform: translateY(2px); 
+        }
     }
 }
