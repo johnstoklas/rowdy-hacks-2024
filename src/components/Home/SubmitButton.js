@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 //change path
-import {submitHealthData} from '/Users/theodorechan/rowdy-hacks-2024/src/api.js'
+import {submitHealthData} from 'C:\\Users\\johns\\rowdy-hacks-2024\\src\\api.js'
 import './index.scss';
 
 const SubmitButton = () => {

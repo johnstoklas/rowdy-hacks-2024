@@ -33,7 +33,9 @@
   }
 
   .graph-container1 {
-
+    width: fit-content;
+    height: fit-content;
+   
     .graph {
       background-color: #F1FAEE;
       height: 270px; 
@@ -41,7 +43,7 @@
       align-items: center;
       justify-content: center;
       font-size: 18px;
-      margin-top: -108%;
+      margin-top: -270%;
       margin-bottom: 3%;
       margin-right: 100%;
       margin-left: 2%;
