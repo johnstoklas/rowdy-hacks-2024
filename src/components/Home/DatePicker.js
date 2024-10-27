@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 const DatePicker = () => {
+    /*
     const [selectedDate, setSelectedDate] = useState('');
 
     const handleDateChange = (event) => {
@@ -29,35 +30,15 @@ const DatePicker = () => {
     } 
 
     const months = ['JAN','FEB', 'MAY', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUG', 'SEPT', 'OCT', 'NOV', 'DEC']
-
+*/
     
   return (
     <>
     <div class="date-box-container">
-        <div class="date-box"> 
-            <div class="date-label"> MONTH </div>
-            <div class="date-output" id="month" style={{width: 125 + 'px'}}> JAN </div>
-        </div>
-        <div class="date-box"> 
-            <div class="date-label"> DAY </div>
-            <div class="date-output" id="day" style={{width: 60 + 'px'}}> 01 </div>
-        </div>
-        <div class="date-box"> 
-            <div class="date-label"> YEAR </div>
-            <div class="date-output" id="year" style={{width: 125 + 'px'}}> 1985 </div>
-        </div>
-        <div class="date-box">
-            <div class="date-label"> HOUR </div>
-            <div class="date-output"> 00 </div> </div>
-        <div class="date-box"> 
-            <div class="date-label"> MIN </div>
-            <div class="date-output"> 00 </div>
-        </div>
+        <div class="date-label"> Date </div>
         <input
             type="date"
             id="calendar-input"
-            value={selectedDate}
-            onChange={handleDateChange}
             class="calendar"
         />
     </div>

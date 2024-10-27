@@ -1,6 +1,5 @@
 import React from 'react'
 import InputHealth from './InputHealth'
-import DatePicker from './DatePicker';
 
 const DataInputBox = () => {
     const heartRateOptions = [
@@ -62,12 +61,12 @@ const DataInputBox = () => {
   return (
     <>
     <div class="input-container">
-        <InputHealth id="heartRate" inputUnit="BPM" options={heartRateOptions} />
-        <InputHealth id="stepCount" inputUnit="STEPS" options={stepCountOptions} />
-        <InputHealth id="calories" inputUnit="CALORIES" options={calorieOptions} />
-        <InputHealth id="water" inputUnit="CUPS" options={waterOptions} />
-        <InputHealth id="sleep" inputUnit="HOURS" options={sleepOptions} />
-        <InputHealth id="stress" inputUnit="LEVEL" options={stressOptions} />
+        <InputHealth id="heartRate" inputUnit="Average BPM" options={heartRateOptions} />
+        <InputHealth id="stepCount" inputUnit="Steps" options={stepCountOptions} />
+        <InputHealth id="calories" inputUnit="Calories" options={calorieOptions} />
+        <InputHealth id="water" inputUnit="Cups of Water" options={waterOptions} />
+        <InputHealth id="sleep" inputUnit="Hours of Sleep" options={sleepOptions} />
+        <InputHealth id="stress" inputUnit="Level of Stress" options={stressOptions} />
     </div>
     </>
   )

@@ -5,6 +5,7 @@ import React from 'react'
 const InputHealth = ({id, inputUnit, options }) => {
   return (
     <div class="input-box">
+    <div className="input-unit"> {inputUnit} </div>
     <select id={id} className="input-data">
             <option value=""> N/A </option>
             {options.map((option, index) => (
@@ -13,7 +14,6 @@ const InputHealth = ({id, inputUnit, options }) => {
                     </option>
                 ))}
         </select>
-    <div className="input-unit"> {inputUnit} </div>
     </div>
   )
 }

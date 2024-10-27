@@ -3,32 +3,23 @@ import Loader from 'react-loaders';
 import DataInputBox from './DataInputBox';
 import DatePicker from './DatePicker';
 import SubmitButton from './SubmitButton';
-import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import NavigateProfile from './NavigateProfile';
 
 const Home = () => {
     return (
         <>
         <div className="container home-page">
-            <div className='nav-bar'>
-                <NavLink 
-                    exact="true"
-                    activeclassname="active"
-                    to="/health"
-                >
-                    <FontAwesomeIcon icon={faHeart} className="heart-icon" />
-                </NavLink>
-            </div>
-        <div className="container home-page">
+        <NavigateProfile />
+        <div class="heading-section">
+            <h1 class="heading1-text"> Select a Date </h1>
+            <h4 class="heading2-text"> Enter your Health Data for Analysis </h4>
+        </div>
         <div className="data-input-box">
             <DatePicker />
             <DataInputBox />
             <SubmitButton />
         </div>
         </div>
-        </div>
-        <Loader type="ball-pulse" />
         </>
     );
 }
