@@ -25,22 +25,7 @@
     }
   }
 
-  .upper-right {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin-right: 25px;
-    margin-left: 450px;
-    margin-top: 60px;
-    width: fit-content;
-    height: fit-content;
-
-  }
-
   .graph-container {
-
     .graph {
       background-color: #FFFFFF; 
       border: 1px solid black;
