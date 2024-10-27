@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import {submitHealthData, analyzeHealthData} from 'C:\\Users\\johns\\rowdy-hacks-2024\\src\\api.js'
+//change path
+import {submitHealthData} from 'C:\\Users\\johns\\rowdy-hacks-2024\\src\\api.js'
 import './index.scss';
 
 const SubmitButton = () => {
@@ -13,7 +14,7 @@ const SubmitButton = () => {
     stress: ''
   });
 
-  const updateFormDate = () => {
+  const updateFormData = () => {
     setFormData(formData.date = document.getElementById('calendar-input'));
     setFormData(formData.sleep = document.getElementById('sleep').value);
     setFormData(formData.heartRate = document.getElementById('heartRate').value);
@@ -21,7 +22,8 @@ const SubmitButton = () => {
     setFormData(formData.calorie = document.getElementById('calories').value);
     setFormData(formData.water = document.getElementById('water').value);
     setFormData(formData.stress = document.getElementById('stress').value);
-    console.log(formData);
+    //console.log(formData);
+    handleSubmit();
   }
 
   const handleSubmit = async (e) => {
@@ -35,20 +37,8 @@ const SubmitButton = () => {
     }
   };
 
-  const handleAnalyze = async () => {
-    try {
-      const analysis = await analyzeHealthData();  // Analyze the health data
-      console.log('Analysis result:', analysis);
-      alert(JSON.stringify(analysis, null, 2));  // Display the analysis in an alert (for demo purposes)
-    } catch (error) {
-      console.error('Error analyzing health data:', error);
-      alert('Error analyzing health data');
-    }
-  };
-  
-
   return (
-    <button onClick={updateFormDate} class="submit-button"> Submit Results </button>
+    <button onClick={updateFormData} class="submit-button"> Submit Results </button>
   )
 }
 

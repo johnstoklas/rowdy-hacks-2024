@@ -1,28 +1,31 @@
 .home-page {
     justify-content: center;
+    background-color: #FFFFFF;
     .nav-bar {
         width: 30px;
 
+
         .heart-icon {
             font-size: 2.5em;
-            color: white;   
+            color: black;  
             border: 3px solid white;
-            padding: .1em; 
+            padding: .1em;
             border-radius: 50%;
             position: absolute;
             left: 95%;
-            margin-top: -100px;
-    
+   
             &:hover {
-                color: black; 
+                color: black;
                 border: 3px solid black;
             }
         }
     }
 
+
     .heading-section {
         text-align: center;
         margin-top: 100px;
+        margin-left: -600px;
         h1, h4 {
             font-family: Coolvetica;
             font-weight: 100;
@@ -30,11 +33,13 @@
             word-spacing: 1px;
         }
 
+
         h1 {
             font-weight: 500;
             margin-bottom: 1px;
             font-size: 40px;
         }
+
 
         h4 {
             word-spacing: 3px;
@@ -43,12 +48,14 @@
         }
     }
 
+
     .data-input-box {
         width: 400px;
         height: 400px;
         position: relative;
         left: 50%;
-        margin-left: -200px;
+        margin-left: 145px;
+
 
         .date-box-container {
             margin-top: 10px;
@@ -56,6 +63,7 @@
             left: 50%;
             margin-left: -100px;
             margin-bottom: 10px;
+
 
             .date-label {
                 color: black;
@@ -67,9 +75,10 @@
                 font-style: italic;
             }
 
+
             .calendar {
-                cursor: pointer; 
-                font-size: 25px; 
+                cursor: pointer;
+                font-size: 25px;
                 font-family: Coolvetica;
                 font-weight: 100;
                 color: black;
@@ -78,6 +87,7 @@
                 border-radius: 5px;
             }
         }
+
 
         .submit-button {
             background-color: black;
@@ -99,20 +109,23 @@
         }
     }
 
+
     .input-container {
         width: fit-content;
         display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        grid-template-rows: repeat(3, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         margin-left: 45px;
         margin-top: 5px;
+
 
         .input-box {
             margin-bottom: 10px;
             margin-right: 10px;
 
+
             .input-data {
-                border: 1px solid black; 
+                border: 1px solid black;
                 height: fit-content;
                 width: 150px;
                 background-color: #FCF7F8;
@@ -123,7 +136,7 @@
                 border-radius: 10px;
                 padding: .2em;
             }
-    
+   
             .input-unit {
                 height: 20px;
                 width: fit-content;
