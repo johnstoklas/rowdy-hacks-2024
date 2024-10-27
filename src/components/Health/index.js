@@ -1,9 +1,12 @@
 import React from 'react';
 import './index.scss';
 import GradeContainer from '../GradesContainer';
+import Topbar from './Topbar';
 
 const Health = () => {
   return (
+    <>
+    <Topbar />
     <div className="container">
       {/* Response Area */}
       <div className="response-container">
@@ -19,6 +22,7 @@ const Health = () => {
       </div>
 
     </div>
+    </>
   );
 };
 
