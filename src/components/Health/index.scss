@@ -11,14 +11,29 @@
     width: 130%;
     height: fit-content;
     margin-top: 60px;
+
+    h1 {
+      margin-left: 10px;
+      color: #F1FAEE;
+      font-weight: 500;
+      font-size: 24px;
+    }
     
     .scrollable-text {
       height: 370px;
       background-color: #66B58F;
+
+      p {
+        color: #F1FAEE;
+        margin-left: 10px;
+        font-size: 14px;
+      }
+      
     }
   }
 
   .graph-container {
+
     .graph {
       background-color: #A8DADC;
       height: 330px; 
@@ -28,6 +43,13 @@
       font-size: 18px;
       margin-top: -480px;
       margin-right: 500%;
+
+      h1 {
+        margin-left: 10px;
+        color: #F1FAEE;
+        font-weight: 500;
+        font-size: 24px;
+      }
     }
   }
 } 
