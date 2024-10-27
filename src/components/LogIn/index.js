@@ -1,34 +1,62 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const LogIn = () => {
-    const [logIn, setLogIn] = useState({ 
-        username: "",
-        password: "",
+    const [logIn, setLogIn] = useState({
+        username: '',
+        password: '',
     });
 
-    const updateLogIn = (key) => { 
-        logIn.username = document.getElementById('username').value;
-        logIn.password = document.getElementById('password').value;
-        if(key === 'in') {
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setLogIn({
+            ...logIn,
+            [name]: value,
+        });
+    };
 
+    const updateLogIn = (key) => {
+        if (!logIn.username.trim() || !logIn.password.trim()) {
+            alert("Please fill in both username and password.");
+            return;
         }
-        else {
 
+        if (key === 'in') {
+            // Sign-in logic
+            console.log("Signing in with:", logIn.username, logIn.password);
+        } else {
+            // Sign-up logic
+            console.log("Signing up with:", logIn.username, logIn.password);
         }
-    }
-  return (
-    <>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" placeholder="Enter your username" required />
+    };
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+    return (
+        <>
+            <label htmlFor="username">Username:</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                value={logIn.username}
+                placeholder="Enter your username"
+                onChange={handleInputChange}
+                required
+            />
 
-    <button id="signIn-button" > Sign In </button>
-    <button id="signUp-button" > Sign Up </button>
+            <label htmlFor="password">Password:</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                value={logIn.password}
+                placeholder="Enter your password"
+                onChange={handleInputChange}
+                required
+            />
 
-    </>
-  )
-}
+            <button id="signIn-button" onClick={() => updateLogIn('in')}> Sign In </button>
+            <button id="signUp-button" onClick={() => updateLogIn('up')}> Sign Up </button>
+        </>
+    );
+};
 
-export default LogIn
+export default LogIn;

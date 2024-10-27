@@ -12,7 +12,7 @@ const Health = () => {
       {/* Upper Right Quadrant */}
       <div className="upper-right">
         <div className="upper-right-box">
-          <p>This is the upper box.</p>
+          <p> A+ </p>
         </div>
         <div className="lower-quadrant">
           <div className="small-box">1</div>
