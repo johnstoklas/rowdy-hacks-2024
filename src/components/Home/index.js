@@ -5,6 +5,7 @@ import DataInputBox from './DataInputBox';
 import DatePicker from './DatePicker';
 import SubmitButton from './SubmitButton';
 import NavigateProfile from './NavigateProfile';
+import Topbar from './Topbar';
 
 const Home = () => {
   // State for form data
@@ -28,13 +29,12 @@ const Home = () => {
 
   return (
     <>
-      <div className="container home-page">
-        <NavigateProfile />
-        <div className="heading-section">
-          <h1 className="heading1-text">Select a Date</h1>
-          <h4 className="heading2-text">Enter your Health Data for Analysis</h4>
-        </div>
-        <div className="data-input-box">
+    <Topbar />
+      <div className="home-page">        
+        <div className="data-input-box fade-in">
+            <div className="heading-section">
+            <h1 className="heading1-text"> Enter Health Data for Analysis </h1>
+            </div>
           {/* Pass down the updateFormData function to update the date and other health data */}
           <DatePicker updateFormData={updateFormData} />
           <DataInputBox updateFormData={updateFormData} />

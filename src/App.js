@@ -2,7 +2,6 @@ import './App.scss';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Health from './components/Health';
-import Arrival from './components/Arrival';
 import LogIn from './components/LogIn';
 
 function App() {
@@ -10,9 +9,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<LogIn />}/>
-        <Route path="/health" element={<Health />}/>
-        <Route path="/home" element={<Home />}/>
-
+        <Route path="/profile" element={<Health />}/>
+        <Route path="/input" element={<Home />} />
       </Routes>
     </>
   )
