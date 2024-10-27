@@ -1,21 +1,22 @@
-import './index.scss';
-import React from 'react'
+import React from 'react';
 
-//creates dropdown for each statistic we are tracking
-const InputHealth = ({id, inputUnit, options }) => {
+const InputHealth = ({ id, inputUnit, options, onChange }) => {
+  const handleSelectChange = (e) => {
+    const selectedValue = e.target.value;  // Get the selected value
+    onChange(id, selectedValue);  // Call onChange and pass the id as the key and selectedValue as value
+  };
+
   return (
-    <div class="input-box">
-    <div className="input-unit"> {inputUnit} </div>
-    <select id={id} className="input-data">
-            <option value=""> N/A </option>
-            {options.map((option, index) => (
-                    <option key={index} value={option.value}>
-                        {option.label}
-                    </option>
-                ))}
-        </select>
+    <div className="input-health">
+      <div  class="input-unit"> {inputUnit} </div>
+      <select id={id} onChange={handleSelectChange}>
+        <option value=""> N/A {inputUnit}</option> {/* Default option */}
+        {options.map(option => (
+          <option key={option.value} value={option.value}>{option.label}</option>
+        ))}
+      </select>
     </div>
-  )
-}
+  );
+};
 
-export default InputHealth
+export default InputHealth;

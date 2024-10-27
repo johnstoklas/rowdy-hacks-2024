@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './index.scss';
-import {analyzeHealthData} from 'C:\\Users\\johns\\rowdy-hacks-2024\\src\\api.js'
+import {analyzeHealthData} from 'C:\\GUSTAVO\\HACKATHON\\rowdy-hacks-2024\\src\\api.js'
 
 
 const Health = () => {
@@ -16,20 +16,29 @@ const Health = () => {
   const toggleOverall = () => {
     setOverallOpen(!overallOpen);
   };
-  useEffect(() => {
-    const handleAnalyze = async () => {
-      try {
-        const analysis = await analyzeHealthData();  // Analyze the health data
-        console.log('Analysis result:', analysis);
-        alert(JSON.stringify(analysis, null, 2));  // Display the analysis in an alert (for demo purposes)
-      } catch (error) {
-        console.error('Error analyzing health data:', error);
-        alert('Error analyzing health data');
+
+useEffect(() => {
+  console.log("useEffect is running");  // Log when useEffect is triggered
+  
+  const handleAnalyze = async () => {
+    console.log("handleAnalyze is being called");  // Log when the function starts
+    try {
+      const analysis = await analyzeHealthData();  // Call the backend API
+      console.log('Analysis result:', analysis);  // Log the result from the backend
+      alert(JSON.stringify(analysis, null, 2));  // Display the analysis in an alert
+    } catch (error) {
+      console.error('Error analyzing health data:', error);  // Log any error
+      if (error.response) {
+        console.error('Backend error response:', error.response.data);  // Log the backend error response
+      } else {
+        console.error('Error message:', error.message);  // Log the general error message
       }
-    };
-    
-    handleAnalyze();
-  }, []);
+      alert('Error analyzing health data');  // Alert the user about the error
+    }
+  };
+
+  handleAnalyze();  // Call the function when the component loads
+}, []);  // The empty array ensures this only runs once on component load
 
   return (
     <nav>
