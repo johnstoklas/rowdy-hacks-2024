@@ -3,6 +3,7 @@ import { analyzeHealthData } from 'C:\\GUSTAVO\\HACKATHON\\rowdy-hacks-2024\\src
 import './index.scss';
 import GradeContainer from '../GradesContainer';
 import Topbar from './Topbar';
+import HealthGraph from './healthGraph';
 
 const Health = () => {
   const [activeItems, setActiveItems] = useState([]);
@@ -42,47 +43,32 @@ const Health = () => {
 
   return (
     <>
-      <Topbar />
-      <div className="container">
-        {/* Response Area */}
-        <div className="response-container">
-          {analysisResult ? (
-            <div className="analysis-result">
-              <h2>Analysis Results</h2>
-              <p>Average Sleep: {analysisResult.analysis.avgSleep}</p>
-              <p>Average Heart Rate: {analysisResult.analysis.avgHeartRate}</p>
-              <p>Average Steps: {analysisResult.analysis.avgSteps}</p>
-              <p>Predicted Stress Level: {analysisResult.analysis.stressLevel}</p>
-              <p>Recommendations: {analysisResult.analysis.recommendations}</p>
-            </div>
-          ) : (
-            <p>Loading analysis data...</p>
-          )}
-        </div>]
-
+    <Topbar />
+    <div className="container">
+      {/* Response Area */}
+      <div className="response-container">
         
+        <div className="scrollable-text"> </div>
+      </div>
 
-        {/* Grade Area */}
-        <GradeContainer />
+      {/* Grade Area */}
+      <GradeContainer />
 
-        {/* Graph Area */}
-        <div className="graph-container1 fade-in">
-          <div className="graph">
-            <h1> Here is your Prediction </h1>
-            {analysisResult ? (
+      {/* Graph Area */}
+
+      <div className="graph-container1 fade-in">
+        <HealthGraph />
+        <div className="graph">
+          <h1> Here is your Report Based on your Data </h1>
+          {analysisResult ? (
             <p> {analysisResult.analysis.recommendations} </p>
             ) : (
               <p>Loading analysis data...</p>
           )}
-          </div>
-        </div>
-
-        <div className="graph-container2 fade-in">
-          <div className="graph">
-            <h1> Analyze Trends Over Time! </h1>
-          </div>
         </div>
       </div>
+
+    </div>
     </>
   );
 };
