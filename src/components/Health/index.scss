@@ -36,18 +36,18 @@
   .graph-container1 {
     width: fit-content;
     height: fit-content;
+    position: absolute;
+    top: 15%;
+    margin-left: 60px;
    
     .graph {
       background-color: #F1FAEE;
       height: 550px; 
-      width: 140%;
       align-items: center;
       justify-content: center;
+      width: 1100px;
       font-size: 18px;
-      margin-top: -110%;
-      margin-bottom: 3%;
-      margin-right: 100%;
-      margin-left: 8%;
+      left: 50%;
       border-radius: 20px;
       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
 

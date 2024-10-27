@@ -62,20 +62,20 @@ const GradeContainer = ({ analysis }) => {
   const calorieGrade = getGradeForMetric(avgCalories, 'calories');  // Placeholder logic for calories
 
   return (
-    <>
-      <div className="grade-container"> 
-        <div className="background-shape"></div>
-        <div className="main-grade fade-in"> A+ </div>
-        <div className="specific-grades fade-in">
+      <div className="grade-container fade-in"> 
+        <div>
+            <h1> Overall Grade </h1>
+            <div className="main-grade"> A+ </div>
+        </div>
+        <div className="specific-grades">
           <SmallCircleGrades grade={heartRateGrade} label="Heart Rate" />
           <SmallCircleGrades grade={stepsGrade} label="Exercise" />
           <SmallCircleGrades grade={sleepGrade} label="Sleep" />
           <SmallCircleGrades grade={waterGrade} label="Water" />
           <SmallCircleGrades grade={calorieGrade} label="Calories" />
           <SmallCircleGrades grade={stressGrade} label="Stress" />
-        </div>
       </div>
-    </>
+    </div>
   );
 };
 

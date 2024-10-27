@@ -20,45 +20,49 @@ body, html {
     display: flex;
     flex-direction: column; 
     width: 300px; 
-    padding: 20px; // Add padding inside the form
-    background-color: $background-color; // Set form background color
-    border-radius: $border-radius; // Rounded corners
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Soft shadow effect
+    padding: 20px;
+    background-color: $background-color; 
+    border-radius: $border-radius; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+
+    .log-in-title {
+        font-family: Roboto;
+    }
 }
 
 label {
-    margin-bottom: 5px; // Space between label and input
-    font-weight: bold; // Bold font for labels
+    margin-bottom: 5px; 
+    font-weight: bold; 
 }
 
 input {
-    margin-bottom: 15px; // Space between inputs
-    padding: 10px; // Padding inside the input
-    border: 1px solid $primary-color; // Primary color border
-    border-radius: $border-radius; // Rounded corners
-    background-color: $background-color; // Same background color as the form
-    transition: border 0.3s; // Transition effect for border
+    margin-bottom: 15px; 
+    padding: 10px;
+    border: 1px solid $primary-color; 
+    border-radius: $border-radius; 
+    background-color: $background-color; 
+    transition: border 0.3s; 
 
     &:focus {
-        border-color: darken($primary-color, 10%); // Darker border on focus
-        outline: none; // Remove default outline
+        border-color: darken($primary-color, 10%); 
+        outline: none; 
     }
 }
 
 button {
-    padding: 10px; // Padding inside buttons
-    border: none; // Remove default border
-    border-radius: $border-radius; // Rounded corners
-    color: white; // Text color
-    background-color: $button-color; // Button background color
-    cursor: pointer; // Pointer cursor on hover
-    transition: background-color 0.3s; // Transition effect for background color
+    padding: 10px;
+    border: none; 
+    border-radius: $border-radius; 
+    color: white; 
+    background-color: $button-color; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
 
     &:hover {
-        background-color: darken($button-color, 10%); // Darker color on hover
+        background-color: darken($button-color, 10%);
     }
 
     &:not(:last-child) {
-        margin-bottom: 10px; // Space between buttons
+        margin-bottom: 10px;
     }
 }

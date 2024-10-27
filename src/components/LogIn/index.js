@@ -37,7 +37,7 @@ const LogIn = () => {
         <>
         <div className="center-container">
         <div className="log-in-container">
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username" class="log-in-title">Username:</label>
             <input
                 type="text"
                 id="username"
@@ -48,7 +48,7 @@ const LogIn = () => {
                 required
             />
 
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" class="log-in-title">Password:</label>
             <input
                 type="password"
                 id="password"

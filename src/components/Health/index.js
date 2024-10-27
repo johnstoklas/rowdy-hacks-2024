@@ -8,7 +8,7 @@ import HealthGraph from './healthGraph';
 const Health = () => {
   const [activeItems, setActiveItems] = useState([]);
   const [overallOpen, setOverallOpen] = useState(false);
-  const [analysisResult, setAnalysisResult] = useState(null);  // Store analysis result
+  const [analysisResult, setAnalysisResult] = useState(null);  
 
   const handleToggle = (item) => {
     setActiveItems((prev) =>
@@ -22,24 +22,24 @@ const Health = () => {
 
   useEffect(() => {
     const handleAnalyze = async () => {
-      console.log("handleAnalyze is being called");  // Log when the function starts
+      console.log("handleAnalyze is being called");  
       try {
-        const analysis = await analyzeHealthData();  // Call the backend API
-        console.log('Analysis result:', analysis);  // Log the result from the backend
-        setAnalysisResult(analysis);  // Store the analysis in state
+        const analysis = await analyzeHealthData();  
+        console.log('Analysis result:', analysis);  
+        setAnalysisResult(analysis);  
       } catch (error) {
-        console.error('Error analyzing health data:', error);  // Log any error
+        console.error('Error analyzing health data:', error);
         if (error.response) {
-          console.error('Backend error response:', error.response.data);  // Log the backend error response
+          console.error('Backend error response:', error.response.data);  
         } else {
-          console.error('Error message:', error.message);  // Log the general error message
+          console.error('Error message:', error.message);  
         }
-        alert('Error analyzing health data');  // Alert the user about the error
+        alert('Error analyzing health data');  
       }
     };
 
-    handleAnalyze();  // Call the function when the component loads
-  }, []);  // The empty array ensures this only runs once on component load
+    handleAnalyze(); 
+  }, []);  
 
   return (
     <>
@@ -55,7 +55,6 @@ const Health = () => {
 
       {/* Graph Area */}
       <div className="graph-container1 fade-in">
-        <HealthGraph />
         <div className="graph">
           <h1> Here is your Report Based on your Data </h1>
           {analysisResult ? (
