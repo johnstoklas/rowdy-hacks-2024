@@ -8,7 +8,6 @@ import NavigateProfile from './NavigateProfile';
 import Topbar from './Topbar';
 
 const Home = () => {
-  // State for form data
   const [formData, setFormData] = useState({
     date: '',
     sleep: '',
@@ -19,7 +18,6 @@ const Home = () => {
     stress: ''
   });
 
-  // Function to update form data
   const updateFormData = (key, value) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -35,7 +33,6 @@ const Home = () => {
             <div className="heading-section">
             <h1 className="heading1-text"> Enter Health Data for Analysis </h1>
             </div>
-          {/* Pass down the updateFormData function to update the date and other health data */}
           <DatePicker updateFormData={updateFormData} />
           <DataInputBox updateFormData={updateFormData} />
           <SubmitButton formData={formData} />

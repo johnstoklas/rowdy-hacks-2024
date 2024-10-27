@@ -41,6 +41,11 @@ const Health = () => {
     handleAnalyze(); 
   }, []);  
 
+
+  useEffect(() => {
+    console.log('Updated analysis result:', analysisResult);
+  }, [analysisResult]);  
+
   return (
     <>
     <Topbar />
@@ -51,7 +56,11 @@ const Health = () => {
       </div>
 
       {/* Grade Area */}
-      <GradeContainer analysisResult={analysisResult} />
+      {analysisResult ? (
+        <GradeContainer analysis={analysisResult.analysis} />
+      ) : (
+        <p>Loading analysis data...</p>
+      )}
 
       {/* Graph Area */}
       <div className="graph-container1 fade-in">

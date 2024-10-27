@@ -2,66 +2,69 @@ import React from 'react';
 import './index.scss';
 import SmallCircleGrades from '../SmallCircleGrades';
 
-const getGradeForMetric = (value, metric) => {
-  // Define ranges for each metric to assign letter grades
-  console.log(metric);
-  console.log(value);
-  if (metric === 'sleep') {
-    if (value >= 8) return 'A+';
-    if (value >= 7) return 'A';
-    if (value >= 6) return 'B+';
-    if (value >= 5) return 'B';
-    return 'C';
-  } else if (metric === 'heartRate') {
-    if (value <= 150) return 'A+';
-    if (value <= 160) return 'A';
-    if (value <= 170) return 'B+';
-    if (value <= 180) return 'B';
-    return 'C';
-  } else if (metric === 'steps') {
-    if (value >= 10000) return 'A+';
-    if (value >= 8000) return 'A';
-    if (value >= 6000) return 'B+';
-    if (value >= 4000) return 'B';
-    return 'C';
-  } else if (metric === 'calories') {
-    if (value <= 2000) return 'A+';
-    if (value <= 2500) return 'A';
-    if (value <= 3000) return 'B+';
-    if (value <= 3500) return 'B';
-    return 'C';
-  } else if (metric === 'water') {
-    if (value >= 8) return 'A+';
-    if (value >= 6) return 'A';
-    if (value >= 4) return 'B+';
-    return 'C';
-  } else if (metric === 'stress') {
-    if (value > 1 && value < 2) return 'A+';
-    if (value <= 2) return 'A';
-    if (value <= 3) return 'B+';
-    if (value <= 4) return 'B';
-    return 'C';
-  }
-};
-
 const GradeContainer = ({ analysis }) => {
-  // Check if analysis exists to avoid errors
+
+  console.log(analysis.analysis);
+
+  const getGradeForMetric = (value, metric) => {
+
+    console.log(metric);
+    console.log(value);
+    if (metric === 'sleep') {
+      if (value >= 8) return 'A+';
+      if (value >= 7) return 'A';
+      if (value >= 6) return 'B+';
+      if (value >= 5) return 'B';
+      return 'C';
+    } else if (metric === 'heartRate') {
+      if (value <= 150) return 'A+';
+      if (value <= 160) return 'A';
+      if (value <= 170) return 'B+';
+      if (value <= 180) return 'B';
+      return 'C';
+    } else if (metric === 'steps') {
+      if (value >= 10000) return 'A+';
+      if (value >= 8000) return 'A';
+      if (value >= 6000) return 'B+';
+      if (value >= 4000) return 'B';
+      return 'C';
+    } else if (metric === 'calories') {
+      if (value <= 2000) return 'A+';
+      if (value <= 2500) return 'A';
+      if (value <= 3000) return 'B+';
+      if (value <= 3500) return 'B';
+      return 'C';
+    } else if (metric === 'water') {
+      if (value >= 8) return 'A+';
+      if (value >= 6) return 'A';
+      if (value >= 4) return 'B+';
+      return 'C';
+    } else if (metric === 'stress') {
+      if (value > 1 && value < 2) return 'A+';
+      if (value <= 2) return 'A';
+      if (value <= 3) return 'B+';
+      if (value <= 4) return 'B';
+      return 'C';
+    }
+  };
+
+  console.log('analaysis',  analysis.avgSleep);
+
   const {
-    avgSleep = 0,
-    avgHeartRate = 0,
-    avgSteps = 0,
-    stressLevel = 0,
-    avgCalories = 0,  
-    avgWater = 0
+    avgSleep1 = analysis.avgSleep,
+    avgHeartRate1 = analysis.avgHeartRate,
+    avgSteps1 = analysis.avgSteps,
+    stressLevel1 = analysis.stressLevel,
+    avgCalories1 = analysis.avgCal,  
+    avgWater1 = analysis.avgWater
   } = analysis?.analysis || {};
 
-  // Convert values to grades using the getGradeForMetric function
-  const sleepGrade = getGradeForMetric(avgSleep, 'sleep');
-  const heartRateGrade = getGradeForMetric(avgHeartRate, 'heartRate');
-  const stepsGrade = getGradeForMetric(avgSteps, 'steps');
-  const stressGrade = getGradeForMetric(stressLevel, 'stress');
-  const waterGrade = getGradeForMetric(avgWater, 'water');  // Placeholder logic for water
-  const calorieGrade = getGradeForMetric(avgCalories, 'calories');  // Placeholder logic for calories
+  const sleepGrade = getGradeForMetric(avgSleep1, 'sleep');
+  const heartRateGrade = getGradeForMetric(avgHeartRate1, 'heartRate');
+  const stepsGrade = getGradeForMetric(avgSteps1, 'steps');
+  const stressGrade = getGradeForMetric(stressLevel1, 'stress');
+  const waterGrade = getGradeForMetric(avgWater1, 'water');  
+  const calorieGrade = getGradeForMetric(avgCalories1, 'calories');  
 
   const list = [
     sleepGrade,
@@ -72,10 +75,8 @@ const GradeContainer = ({ analysis }) => {
     calorieGrade
   ]
 
-  // Initialize count
 let count = 0;
 
-// Function to calculate the total score from the list of grades
 const overall = (list) => {
   list.forEach((key) => {
     if (key === 'A+') {
@@ -94,9 +95,8 @@ const overall = (list) => {
 
 overall(list);
 
-// Function to convert the total count to an overall grade
 const overallGrade = (count) => {
-  const average = count / 6;  // Divide the total by the number of subjects
+  const average = count / 6;  
   if (average < 1.5) {
     return 'C';
   } else if (average < 2.5) {

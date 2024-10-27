@@ -6,31 +6,29 @@ const SubmitButton = ({ formData }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Get userId from localStorage (or from a state if using state management)
-    const userId = localStorage.getItem('username');  // Assuming username is stored in localStorage
 
-    // Check if userId exists before submitting
+    const userId = localStorage.getItem('username');  
+
     if (!userId) {
       alert('User is not authenticated. Please sign in first.');
       return;
     }
 
     try {
-      // Format the data to be sent to the backend
       const formattedData = {
-        user: userId,  // Include the userId
+        user: userId,  
         healthData: {
           date: formData.date,
           heartRate: formData.heartRate,
-          steps: formData.stepCount,  // Ensure it's "steps"
-          calorie: formData.calories, // Ensure it's "calorie"
+          steps: formData.stepCount, 
+          calorie: formData.calories, 
           water: formData.water,
           sleep: formData.sleep,
           stress: formData.stress
         }
       };
 
-      const response = await submitHealthData(formattedData);  // Submit the formatted data
+      const response = await submitHealthData(formattedData);  
       alert('Data submitted successfully!');
     } catch (error) {
       console.error('Error submitting health data:', error);

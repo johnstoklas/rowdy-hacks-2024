@@ -2,7 +2,7 @@ import React from 'react';
 
 const DatePicker = ({ updateFormData }) => {
   const handleDateChange = (e) => {
-    updateFormData('date', e.target.value);  // Pass the selected date back to Home.js
+    updateFormData('date', e.target.value); 
   };
 
   return (
@@ -12,7 +12,7 @@ const DatePicker = ({ updateFormData }) => {
         type="date"
         id="calendar-input"
         className="calendar"
-        onChange={handleDateChange}  // Call the handler when date changes
+        onChange={handleDateChange}  
       />
     </div>
   );

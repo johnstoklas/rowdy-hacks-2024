@@ -3,7 +3,7 @@ import InputHealth from './InputHealth';
 
 const DataInputBox = ({ updateFormData }) => {
   const handleInputChange = (key, value) => {
-    updateFormData(key, value);  // Pass each health data field to Home.js
+    updateFormData(key, value);  
   };
 
   const heartRateOptions = [

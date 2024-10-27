@@ -1,16 +1,16 @@
 .graph-container1 {
-    display: flex;              // Use flexbox for layout
-    flex-direction: column;     // Stack elements vertically
-    justify-content: center;     // Center items vertically
-    align-items: center;        // Center items horizontally
+    display: flex;             
+    flex-direction: column;   
+    justify-content: center;     
+    align-items: center;     
     background-color: #F1FAEE;
     height: 270px; 
-    width: 100%;                // Use full width of the parent
+    width: 100%;                
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;          // Adjust margin as needed
-    padding: 20px;             // Add some padding for spacing
-    overflow: hidden;          // Prevent overflow issues
+    margin-top: 20px;       
+    padding: 20px;             
+    overflow: hidden;          
 
     h1 {
         margin-left: 10px;

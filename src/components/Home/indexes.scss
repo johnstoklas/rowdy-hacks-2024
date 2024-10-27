@@ -30,14 +30,14 @@
 }
 
 .fade-in {
-    opacity: 0; /* Start invisible */
-    transform: translateY(-50px); /* Start above the screen */
-    animation: slideDown 1s forwards; /* Animation effect */
+    opacity: 0; 
+    transform: translateY(-50px); 
+    animation: slideDown 1s forwards; 
 }
 
 @keyframes slideDown {
     to {
-        opacity: 1; /* End visible */
-        transform: translateY(0); /* Move to original position */
+        opacity: 1; 
+        transform: translateY(0); 
     }
 }
