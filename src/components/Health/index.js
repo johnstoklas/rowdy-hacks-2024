@@ -1,31 +1,20 @@
 import React from 'react';
 import './index.scss';
+import GradeContainer from '../GradesContainer';
 
 const Health = () => {
   return (
     <div className="container">
-      {/* Upper Left Quadrant */}
-      <div className="upper-left">
-        <textarea className="scrollable-text" placeholder="Enter your paragraph here..."></textarea>
+      {/* Response Area */}
+      <div className="response-container">
+        <div className="scrollable-text"> AI will go here... </div>
       </div>
 
-      {/* Upper Right Quadrant */}
-      <div className="upper-right">
-        <div className="upper-right-box">
-          <p> A+ </p>
-        </div>
-        <div className="lower-quadrant">
-          <div className="small-box">1</div>
-          <div className="small-box">2</div>
-          <div className="small-box">3</div>
-          <div className="small-box">4</div>
-          <div className="small-box">5</div>
-          <div className="small-box">6</div>
-        </div>
-      </div>
+      {/* Grade Area */}
+      <GradeContainer />
 
-      {/* Lower Left Quadrant */}
-      <div className="lower-left">
+      {/* Graph Area */}
+      <div className="graph-container">
         <div className="graph">Graph Area 1</div>
       </div>
 

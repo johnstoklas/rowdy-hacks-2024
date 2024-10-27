@@ -35,7 +35,7 @@ const DatePicker = () => {
   return (
     <>
     <div class="date-box-container">
-        <div class="date-label"> Date </div>
+        <div class="date-label"> Date: </div>
         <input
             type="date"
             id="calendar-input"

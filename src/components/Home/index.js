@@ -8,13 +8,12 @@ import NavigateProfile from './NavigateProfile';
 const Home = () => {
     return (
         <>
-        <div className="container home-page">
+        <div className="home-page">
         <NavigateProfile />
-        <div class="heading-section">
-            <h1 class="heading1-text"> Select a Date </h1>
-            <h4 class="heading2-text"> Enter your Health Data for Analysis </h4>
-        </div>
         <div className="data-input-box">
+            <div class="heading-section">
+                <h1 class="heading1-text"> Enter Health Data for Analysis </h1>
+            </div>
             <DatePicker />
             <DataInputBox />
             <SubmitButton />
