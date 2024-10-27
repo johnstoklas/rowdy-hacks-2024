@@ -1,3 +1,4 @@
+import './index.scss'
 import React, { useState } from 'react';
 
 const LogIn = () => {
@@ -31,6 +32,8 @@ const LogIn = () => {
 
     return (
         <>
+        <div className="center-container">
+        <div className="log-in-container">
             <label htmlFor="username">Username:</label>
             <input
                 type="text"
@@ -55,6 +58,8 @@ const LogIn = () => {
 
             <button id="signIn-button" onClick={() => updateLogIn('in')}> Sign In </button>
             <button id="signUp-button" onClick={() => updateLogIn('up')}> Sign Up </button>
+        </div>
+        </div>
         </>
     );
 };

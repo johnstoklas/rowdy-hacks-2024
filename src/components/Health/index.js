@@ -2,6 +2,7 @@ import React from 'react';
 import './index.scss';
 import GradeContainer from '../GradesContainer';
 import Topbar from './Topbar';
+import HealthGraph from './healthGraph';
 
 const Health = () => {
   return (
@@ -20,6 +21,7 @@ const Health = () => {
       {/* Graph Area */}
 
       <div className="graph-container1 fade-in">
+        <HealthGraph />
         <div className="graph">
           <h1> Analyze Trends Over Time! </h1>
         </div>
