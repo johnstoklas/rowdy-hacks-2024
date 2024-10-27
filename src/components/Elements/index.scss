@@ -1,22 +1,23 @@
-modifiers-container {
+.modifiers-container {
     margin-top: 80px;
     position: relative;
     left: 50%;
-    margin-left: -140px;
-    width: fit-content;
+    transform: translateX(-50%); // Center the container
+    width: fit-content; // Adjust to fit the content
 
     nav {
-        display: flex;  // Use flexbox for horizontal alignment
-        gap: 20px;      // Add space between icons
+        display: flex;             // Use flexbox for horizontal alignment
+        justify-content: center;   // Center the icons within the nav
+        gap: 30px;                // Increase space between icons
     }
 
     .modifiers {
-        font-size: 3em;  // Adjust the icon size (increase as needed)
-        color: white;    // Change the color if needed
-        transition: color 0.3s; // Optional: smooth color transition on hover
+        font-size: 4em;           // Adjust the icon size (increase as needed)
+        color: white;             // Change the color if needed
+        transition: color 0.3s;   // Optional: smooth color transition on hover
 
         &:hover {
-            color: orange; // Change color on hover (optional)
+            color: orange;         // Change color on hover (optional)
         }
     }
 }
