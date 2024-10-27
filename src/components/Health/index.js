@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.scss';
+import {analyzeHealthData} from 'C:\\Users\\johns\\rowdy-hacks-2024\\src\\api.js'
+
 
 const Health = () => {
   const [activeItems, setActiveItems] = useState([]);
@@ -14,6 +16,20 @@ const Health = () => {
   const toggleOverall = () => {
     setOverallOpen(!overallOpen);
   };
+  useEffect(() => {
+    const handleAnalyze = async () => {
+      try {
+        const analysis = await analyzeHealthData();  // Analyze the health data
+        console.log('Analysis result:', analysis);
+        alert(JSON.stringify(analysis, null, 2));  // Display the analysis in an alert (for demo purposes)
+      } catch (error) {
+        console.error('Error analyzing health data:', error);
+        alert('Error analyzing health data');
+      }
+    };
+    
+    handleAnalyze();
+  }, []);
 
   return (
     <nav>
