@@ -2,33 +2,13 @@
     justify-content: center;
     background-color: #66B58F;
 
-    .nav-bar {
-        width: 30px;
-
-
-        .heart-icon {
-            font-size: 2.5em;
-            color: black;  
-            border: 3px solid white;
-            padding: .1em;
-            border-radius: 50%;
-            position: absolute;
-            left: 95%;
-   
-            &:hover {
-                color: black;
-                border: 3px solid black;
-            }
-        }
-    }
-
     .data-input-box {
         width: 400px;
         height: 380px;
         position: relative;
         left: 50%;
         margin-top: 125px;
-        margin-left: -175px;
+        margin-left: -190px;
         background-color: #F1FAEE;
         border-radius: 15px;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);

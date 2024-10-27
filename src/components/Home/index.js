@@ -4,12 +4,14 @@ import DataInputBox from './DataInputBox';
 import DatePicker from './DatePicker';
 import SubmitButton from './SubmitButton';
 import NavigateProfile from './NavigateProfile';
+import Topbar from './Topbar';
 
 const Home = () => {
     return (
         <>
+        <Topbar />
         <div className="home-page">
-        <NavigateProfile />
+        {/*<NavigateProfile />*/}
         <div className="data-input-box">
             <div class="heading-section">
                 <h1 class="heading1-text"> Enter Health Data for Analysis </h1>
