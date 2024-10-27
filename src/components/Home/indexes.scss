@@ -5,27 +5,23 @@
     position: fixed;
     top: 0;
     z-index: 1000;
-    
-    .icon-wrapper > * {
-        display: inline-flex;
-    }
-
-    .icon-wrapper {
-        width: fit-content;
-
-        nav {
-            display: 100%;
-            width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
 
 
-            a {
-                font-size: 22px;
-                color: #F1FAEE;
-                padding: 15px;
-                text-decoration: none;
-                position: relative;
-                left: 95%;
-            }
+    nav {
+        display: 100%;
+        width: 100%;
+
+        a {
+            font-size: 22px;
+            color: #F1FAEE;
+            padding: 15px;
+            text-decoration: none;
+            position: relative;
+            left: 95%;
         }
     }
 }

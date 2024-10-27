@@ -11,10 +11,7 @@ const Topbar = () => (
                 activeclassname="active"
                 to="/profile"
             >
-            <div class="icon-wraper">
-                <p> Profile </p>
-                <FontAwesomeIcon icon={faUser} />
-            </div>
+            <FontAwesomeIcon icon={faUser} />
             </NavLink>
         </nav>
     </div>
