@@ -13,13 +13,6 @@ const Topbar = () => (
             >
             <FontAwesomeIcon icon={faUser} />
             </NavLink>
-            <NavLink
-                exact="true"
-                activeclassname="active"
-                to="/"
-            >
-            <FontAwesomeIcon icon={faEnvelope} />
-            </NavLink>
         </nav>
     </div>
 

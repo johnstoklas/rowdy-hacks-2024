@@ -1,0 +1,64 @@
+$primary-color: #66B58F; 
+$background-color: #F1FAEE; 
+$button-color: #66B58F; 
+$border-radius: 8px; 
+
+body, html {
+    height: 100%; 
+    margin: 0;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-color: #66B58F; 
+}
+
+.log-in-container {
+    display: flex;
+    flex-direction: column; 
+    width: 300px; 
+    padding: 20px; // Add padding inside the form
+    background-color: $background-color; // Set form background color
+    border-radius: $border-radius; // Rounded corners
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Soft shadow effect
+}
+
+label {
+    margin-bottom: 5px; // Space between label and input
+    font-weight: bold; // Bold font for labels
+}
+
+input {
+    margin-bottom: 15px; // Space between inputs
+    padding: 10px; // Padding inside the input
+    border: 1px solid $primary-color; // Primary color border
+    border-radius: $border-radius; // Rounded corners
+    background-color: $background-color; // Same background color as the form
+    transition: border 0.3s; // Transition effect for border
+
+    &:focus {
+        border-color: darken($primary-color, 10%); // Darker border on focus
+        outline: none; // Remove default outline
+    }
+}
+
+button {
+    padding: 10px; // Padding inside buttons
+    border: none; // Remove default border
+    border-radius: $border-radius; // Rounded corners
+    color: white; // Text color
+    background-color: $button-color; // Button background color
+    cursor: pointer; // Pointer cursor on hover
+    transition: background-color 0.3s; // Transition effect for background color
+
+    &:hover {
+        background-color: darken($button-color, 10%); // Darker color on hover
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px; // Space between buttons
+    }
+}

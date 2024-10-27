@@ -47,15 +47,13 @@ const Health = () => {
     <div className="container">
       {/* Response Area */}
       <div className="response-container">
-        
         <div className="scrollable-text"> </div>
       </div>
 
       {/* Grade Area */}
-      <GradeContainer />
+      <GradeContainer analysisResult={analysisResult} />
 
       {/* Graph Area */}
-
       <div className="graph-container1 fade-in">
         <HealthGraph />
         <div className="graph">
@@ -67,7 +65,6 @@ const Health = () => {
           )}
         </div>
       </div>
-
     </div>
     </>
   );
